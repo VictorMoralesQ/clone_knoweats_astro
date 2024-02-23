@@ -5,34 +5,34 @@ import ShoppingBag from '../components/icons/ShoppingBag.astro'
 
 
 <header class="h-full flex justify-between sticky mx-auto pt-2 w-full top-0 z-10 bg-[#2F695C]">
-    <h1 class="ml-40 justify-start pt-4">
+    <h1 class="pl-5 justify-start pt-4">
         <a href="#home" target="_blank noopener noreferrer">
             <img class="w-36 cursor-pointer" src="/public/logo_knoweats.avif" alt="Logo de Knoweats">
         </a>
     </h1>
 
-    <nav class="flex flex-row justify-center items-center flex-grow">
-        <ul class="flex-wrap inline-flex pb-2 gap-x-4">
+    <nav class="flex flex-row justify-center items-center flex-grow relative pr-9">
+        <ul class="flex-wrap inline-flex pb-2 gap-x-4 pr-20">
             <li>
-                <a class="cursor-pointer flex hover:underline" href="#"><h5 class="font-bold p-5 text-white">MENÚ DE LA SEMANA</h5></a>
+                <a class="cursor-pointer flex hover:opacity-85" href="#"><h5 class="font-bold p-5 text-white">MENÚ DE LA SEMANA</h5></a>
             </li>
             <li>
-                <a class="cursor-pointer flex" href="#"><span class="font-bold p-5 text-white">CÓMO FUNCIONA</span></a>
+                <a class="cursor-pointer flex hover:opacity-85" href="#"><span class="font-bold p-5 text-white">CÓMO FUNCIONA</span></a>
             </li>
             <li>
-                <a class="cursor-pointer flex" href="#"><span class="font-bold p-5 text-white">QUIÉNES SOMOS?</span></a>
+                <a class="cursor-pointer flex hover:opacity-85" href="#"><span class="font-bold p-5 text-white">QUIÉNES SOMOS?</span></a>
             </li>
             <li>
-                <a class="cursor-pointer flex" href="#"><span class="font-bold p-5 text-white">FAQ'S</span></a>
+                <a class="cursor-pointer flex hover:opacity-85" href="#"><span class="font-bold p-5 text-white">FAQ'S</span></a>
             </li>
         </ul>  
     </nav>
 
     <div class="flex flex-row justify-end items-center mr-6">
-        <a href="#" class="size-10">
+        <a href="#" class="size-10 hover:animate-pop">
             <User></User>
         </a>
-        <a href="#" class="size-10">
+        <a href="#" class="size-10 hover:amimate-pop">
             <ShoppingBag></ShoppingBag>
         </a>
     </div>
