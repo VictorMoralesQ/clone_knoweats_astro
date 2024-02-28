@@ -1,0 +1,115 @@
+---
+const INDICATIONS = {
+    APIO: {
+        name: "apio",
+        img: "/public/apio.svg"
+    },
+    FRUTOS_SECOS: {
+        name: "frutos secos",
+        img: "/public/frutos-secos-cascara.svg"
+    },
+    PESCADO: {
+        name: "pescado",
+        img: "/public/pescado.svg"
+    },
+    CRUSTACEOS: {
+        name: "pescado",
+        img: "/public/crustaceos.svg"
+    },
+    MOLUSCOS: {
+        name: "moluscos",
+        img: "/public/moluscos.svg"
+    },
+    LACTEOS: {
+        name: "lacteos",
+        img: "/public/lacteos.svg"
+    },
+    SULFITOS: {
+        name: "pescado",
+        img: "/public/sulfitos.svg"
+    },
+    GLUTEN: {
+        name: "gluten",
+        img: "/public/gluten.svg"
+    },
+}
+
+
+const DISHES = [
+    {
+        name: "Solomillo braseado en salsa de higos",
+        img_url: "/public/solomillo-salsa-higos-knoweats.webp",
+        img_url_hover : "/public/Solomillo-salsa-de-higos-knoweats_hover.webp",
+        weight: "450g",
+        price: "7,95€",
+        type: "equilibrado",
+        indications: [INDICATIONS.APIO, INDICATIONS.FRUTOS_SECOS],
+        info: {
+            calories: "733",
+            protein: "40",
+            carbo: "39",
+            fats: "28"
+        }
+        
+    },
+    {
+        name: "Salmón con salsa al cava",
+        img_url: "/public/salmon-al-cava-knoweats.webp",
+        img_url_hover : "/public/salmoncava_hover.webp",
+        weight: "450g",
+        price: "8,95€",
+        type: "equilibrado",
+        indications: [INDICATIONS.PESCADO, INDICATIONS.CRUSTACEOS, INDICATIONS.MOLUSCOS, 
+        INDICATIONS.APIO, INDICATIONS.LACTEOS, INDICATIONS.SULFITOS],
+        info: {
+            calories: "513",
+            protein: "37",
+            carbo: "31",
+            fats: "25"
+        },
+    },
+    {
+        name: "Arroz de costillas y setas",
+        img_url: "/public/arroz-costilla-setas-knoweats.webp",
+        img_url_hover : "/public/arroz-costilla-setas_hover.webp",
+        weight: "420g",
+        price: "6,95€",
+        type: "",
+        indications: [INDICATIONS.APIO],
+        info: {
+            calories: "751",
+            protein: "55",
+            carbo: "124",
+            fats: "17"
+        }
+        
+    },
+    {
+        name: "Lasaña boloñesa",
+        img_url: "/public/lasanya-bolonyesa-knoweats.webp",
+        img_url_hover : "/public/lasanabolonesa_hover.webp",
+        weight: "450g",
+        price: "7,25€",
+        type: "",
+        indications: [INDICATIONS.GLUTEN, INDICATIONS.SULFITOS, INDICATIONS.LACTEOS],
+        info: {
+            calories: "792",
+            protein: "43",
+            carbo: "66",
+            fats: "30"
+        }
+        
+    }
+]
+
+---
+
+<article class="flex flex-col w-5/6 ml-16">
+    <header class="flex justify-center items-center mt-4">
+        <h2 class="font-bold text-black text-5xl">Tienes que probar</h2>
+    </header>
+
+    <footer class="flex justify-center items-center my-10">
+        <button class="w-60 rounded-md bg-[#FF9933] hover:animate-heartbeat"><p class="text-white text-xl font-bold p-4 inline-block">VER TODOS</p></button>
+    </footer>
+</article>
