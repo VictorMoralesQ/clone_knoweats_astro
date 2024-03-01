@@ -34,22 +34,62 @@ const INDICATIONS = {
     },
 }
 
+const INFO = {
+    DISH_1: {
+        name: "calories",
+        amount: "733",
+        name: "protein",
+        amount: "40",
+        name: "carbs",
+        amount: "39",
+        name: "fats",
+        amount: "28"
+    },
+    DISH_2: {
+        name: "calories",
+        amount: "513",
+        name: "protein",
+        amount: "37",
+        name: "carbs",
+        amount: "31",
+        name: "fats",
+        amount: "25"
+    },
+    DISH_3: {
+        name: "calories",
+        amount: "751",
+        name: "protein",
+        amount: "55",
+        name: "carbs",
+        amount: "124",
+        name: "fats",
+        amount: "17"
+    },
+    DISH_4: {
+        name: "calories",
+        amount: "792",
+        name: "protein",
+        amount: "43",
+        name: "carbs",
+        amount: "66",
+        name: "fats",
+        amount: "30"
+    },
+    
+    
+    
+}
 
 const DISHES = [
     {
-        name: "Solomillo braseado en salsa de higos",
+        name: "Solomillo braseado",
         img_url: "/public/solomillo-salsa-higos-knoweats.webp",
         img_url_hover : "/public/Solomillo-salsa-de-higos-knoweats_hover.webp",
         weight: "450g",
         price: "7,95€",
         type: "equilibrado",
         indications: [INDICATIONS.APIO, INDICATIONS.FRUTOS_SECOS],
-        info: {
-            calories: "733",
-            protein: "40",
-            carbo: "39",
-            fats: "28"
-        }
+        info: [INFO.DISH_1]
         
     },
     {
@@ -61,12 +101,7 @@ const DISHES = [
         type: "equilibrado",
         indications: [INDICATIONS.PESCADO, INDICATIONS.CRUSTACEOS, INDICATIONS.MOLUSCOS, 
         INDICATIONS.APIO, INDICATIONS.LACTEOS, INDICATIONS.SULFITOS],
-        info: {
-            calories: "513",
-            protein: "37",
-            carbo: "31",
-            fats: "25"
-        },
+        info: [INFO.DISH_2]
     },
     {
         name: "Arroz de costillas y setas",
@@ -76,12 +111,7 @@ const DISHES = [
         price: "6,95€",
         type: "",
         indications: [INDICATIONS.APIO],
-        info: {
-            calories: "751",
-            protein: "55",
-            carbo: "124",
-            fats: "17"
-        }
+        info: [INFO.DISH_3]
         
     },
     {
@@ -92,24 +122,66 @@ const DISHES = [
         price: "7,25€",
         type: "",
         indications: [INDICATIONS.GLUTEN, INDICATIONS.SULFITOS, INDICATIONS.LACTEOS],
-        info: {
-            calories: "792",
-            protein: "43",
-            carbo: "66",
-            fats: "30"
-        }
+        info: [INFO.DISH_4]
         
     }
 ]
 
 ---
 
-<article class="flex flex-col w-5/6 ml-16">
+<section class="flex flex-col w-5/6 ml-16">
     <header class="flex justify-center items-center mt-4">
         <h2 class="font-bold text-black text-5xl">Tienes que probar</h2>
     </header>
-
+    <article class="flex-row w-5/6 mx-auto grid grid-cols-4 mt-6 gap-x-4">
+        {
+            DISHES.map(({name, img_url, img_url_hover, weight, price, indications, info}) =>(
+                <div class="w-full col-span-1 rounded-xl bg-[#F5F6F9]">
+                    <img class="bg-foo hover:bg-bar rounded-t-xl w-full h-[300px]" src={img_url} alt={name}/>
+                    <h5 class="font-bold w-full  text-black text-[1.2rem] mt-3 ml-4">{name}</h5>
+                    <div class="flex mt-2 mr-4 justify-between">
+                        <div class="flex justify-start ml-3">
+                            <span class="text-sm text-gray-400">({weight})</span>
+                        </div>
+                        <div class="flex justify-end gap-x-1">
+                        {
+                            indications.map((indication) =>(
+                                
+                                 <img class="size-6" src={indication.img} alt={indication.name}>
+                            ))
+                        }
+                        </div>
+                    </div>
+                    <h5 class="font-bold w-full mr-5 text-black text-[1.2rem] mt-3 ml-4">{price}</h5>
+                    <div class="flex flex-row rounded-full w-5/6 justify-center bg-[#fff] mx-auto mt-3 gap-x-1">
+                        <ul class="flex mx-2 my-2 w-full">
+                        {
+                            info.map((inf)=>(
+                               
+                                    <li class="text-black text-sm">{inf.amount}</li>
+                                    <li class="text-xs font-thin text-gray-400">{inf.name}</li>
+                                
+                            ))
+                        }
+                        </ul> 
+                    </div>
+                    <div class="flex justify-center mt-3 mb-4">
+                        <button class="w-11/12 rounded-full opacity-45 bg-[#FF9933] hover:animate-heartbeat"><p class="text-white text-lg font-bold p-1 inline-block">AGOTADO</p></button>
+                    </div> 
+                </div>
+            ))
+        }
+    </article>
     <footer class="flex justify-center items-center my-10">
         <button class="w-60 rounded-md bg-[#FF9933] hover:animate-heartbeat"><p class="text-white text-xl font-bold p-4 inline-block">VER TODOS</p></button>
     </footer>
-</article>
+</section>
+
+<style>
+    .bg-foo{
+        background: url(img_url);
+    }
+    .bg-bar:hover {
+        background: url(img_url_hover);
+    }
+</style>
