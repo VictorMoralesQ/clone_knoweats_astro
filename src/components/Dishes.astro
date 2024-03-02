@@ -36,44 +36,44 @@ const INDICATIONS = {
 
 const INFO = {
     DISH_1: {
-        name: "calories",
-        amount: "733",
-        name: "protein",
-        amount: "40",
-        name: "carbs",
-        amount: "39",
-        name: "fats",
-        amount: "28"
+        cals: "calories",
+        amount_cals: "733",
+        prote: "protein",
+        amount_prote: "40",
+        carbs: "carbs",
+        amount_carbs: "39",
+        fats: "fats",
+        amount_fats: "28"
     },
     DISH_2: {
-        name: "calories",
-        amount: "513",
-        name: "protein",
-        amount: "37",
-        name: "carbs",
-        amount: "31",
-        name: "fats",
-        amount: "25"
+        cals: "calories",
+        amount_cals: "513",
+        prote: "protein",
+        amount_prote: "37",
+        carbs: "carbs",
+        amount_carbs: "31",
+        fats: "fats",
+        amount_fats: "25"
     },
     DISH_3: {
-        name: "calories",
-        amount: "751",
-        name: "protein",
-        amount: "55",
-        name: "carbs",
-        amount: "124",
-        name: "fats",
-        amount: "17"
+        cals: "calories",
+        amount_cals: "751",
+        prote: "protein",
+        amount_prote: "55",
+        carbs: "carbs",
+        amount_carbs: "124",
+        fats: "fats",
+        amount_fats: "17"
     },
     DISH_4: {
-        name: "calories",
-        amount: "792",
-        name: "protein",
-        amount: "43",
-        name: "carbs",
-        amount: "66",
-        name: "fats",
-        amount: "30"
+        cals: "calories",
+        amount_cals: "792",
+        prote: "protein",
+        amount_prote: "43",
+        carbs: "carbs",
+        amount_carbs: "66",
+        fats: "fats",
+        amount_fats: "30"
     },
     
     
@@ -135,9 +135,14 @@ const DISHES = [
     </header>
     <article class="flex-row w-5/6 mx-auto grid grid-cols-4 mt-6 gap-x-4">
         {
-            DISHES.map(({name, img_url, img_url_hover, weight, price, indications, info}) =>(
+            DISHES.map(({name, img_url, img_url_hover, weight, price, indications, info, type}) =>(
                 <div class="w-full col-span-1 rounded-xl bg-[#F5F6F9]">
-                    <img class="bg-foo hover:bg-bar rounded-t-xl w-full h-[300px]" src={img_url} alt={name}/>
+                    <div id="image-container" class="flex flex-col justify-between">
+                        <span class="flex rounded-full font-['Fraunces'] bg-[#d8b47c] text-white font-bold text-xl ml-[140px] mt-3 px-4 z-10 absolute">{type}</span>
+                        <img class=" rounded-t-xl w-[300px] h-[300px] relative block opacity-100 transition-opacity duration-300" src={img_url} alt={name}/>
+                        <img class=" rounded-t-xl w-[280px] h-[300px] absolute block opacity-0 hover:opacity-100 transition-opacity duration-300" src={img_url_hover} alt={name}/>
+                        <span class="rounded-full bg-black text-white font-bold text-xs px-4 mt-[265px] ml-2 py-1 z-10 absolute block ">AGOTADO</span>
+                    </div>
                     <h5 class="font-bold w-full  text-black text-[1.2rem] mt-3 ml-4">{name}</h5>
                     <div class="flex mt-2 mr-4 justify-between">
                         <div class="flex justify-start ml-3">
@@ -153,13 +158,27 @@ const DISHES = [
                         </div>
                     </div>
                     <h5 class="font-bold w-full mr-5 text-black text-[1.2rem] mt-3 ml-4">{price}</h5>
-                    <div class="flex flex-row rounded-full w-5/6 justify-center bg-[#fff] mx-auto mt-3 gap-x-1">
-                        <ul class="flex mx-2 my-2 w-full">
+                    <div class="flex flex-row rounded-full w-11/12 justify-center bg-[#fff] mx-auto mt-3">
+                        <ul class="flex flex-row justify-center my-1 w-full">
                         {
                             info.map((inf)=>(
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-black text-sm">{inf.amount_cals}</li>
+                                    <li class="text-[11px] text-gray-400">{inf.cals}</li>
+                                </div>
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-black text-sm">{inf.amount_prote}</li>
+                                    <li class="text-[11px] text-gray-400">{inf.prote}</li>
+                                </div>
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-sm  text-black">{inf.amount_carbs}</li>
+                                    <li class="text-[11px]  text-gray-400">{inf.carbs}</li>
+                                </div>
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-sm  text-black">{inf.amount_fats}</li>
+                                    <li class="text-[11px] text-gray-400">{inf.fats}</li>
+                                </div>
                                
-                                    <li class="text-black text-sm">{inf.amount}</li>
-                                    <li class="text-xs font-thin text-gray-400">{inf.name}</li>
                                 
                             ))
                         }
@@ -177,11 +196,3 @@ const DISHES = [
     </footer>
 </section>
 
-<style>
-    .bg-foo{
-        background: url(img_url);
-    }
-    .bg-bar:hover {
-        background: url(img_url_hover);
-    }
-</style>

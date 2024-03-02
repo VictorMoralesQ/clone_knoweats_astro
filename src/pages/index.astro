@@ -4,12 +4,13 @@ import SectionContainer from '../components/SectionContainer.astro';
 import Advantages from '../components/Advantages.astro'
 import Steps from '../components/Steps.astro'
 import Dishes from '../components/Dishes.astro'
+import Carousel from '../components/Carousel.astro'
 ---
 
 <Layout title="Clone Knoweats Landing Page"
 	description="Cloning the web page from Knoweats with educational fines">
 	
-	<main class="px-4">
+	<main>
 		<SectionContainer id="advantages">
 			<Advantages/>
 		</SectionContainer>
@@ -19,7 +20,7 @@ import Dishes from '../components/Dishes.astro'
 		<SectionContainer id="dishes">
 			<Dishes/>
 		</SectionContainer>
-		
+		<Carousel/>
 	</main>
 </Layout>
 
