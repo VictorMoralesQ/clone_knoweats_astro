@@ -139,8 +139,8 @@ const DISHES = [
                 <div class="w-full col-span-1 rounded-xl bg-[#F5F6F9]">
                     <div id="image-container" class="flex flex-col justify-between">
                         <span class="flex rounded-full font-['Fraunces'] bg-[#d8b47c] text-white font-bold text-xl ml-[140px] mt-3 px-4 z-10 absolute">{type}</span>
-                        <img class=" rounded-t-xl w-[300px] h-[300px] relative block opacity-100 transition-opacity duration-300" src={img_url} alt={name}/>
-                        <img class=" rounded-t-xl w-[280px] h-[300px] absolute block opacity-0 hover:opacity-100 transition-opacity duration-300" src={img_url_hover} alt={name}/>
+                        <img class=" rounded-t-xl w-full h-[300px] relative block opacity-100 transition-opacity duration-300" src={img_url} alt={name}/>
+                        <img class=" rounded-t-xl lg:w-[320px] h-[300px] md:w-[285px] absolute block opacity-0 hover:opacity-100 transition-opacity duration-300" src={img_url_hover} alt={name}/>
                         <span class="rounded-full bg-black text-white font-bold text-xs px-4 mt-[265px] ml-2 py-1 z-10 absolute block ">AGOTADO</span>
                     </div>
                     <h5 class="font-bold w-full  text-black text-[1.2rem] mt-3 ml-4">{name}</h5>
@@ -184,14 +184,14 @@ const DISHES = [
                         }
                         </ul> 
                     </div>
-                    <div class="flex justify-center mt-3 mb-4">
+                    <div class="flex justify-center mt-3 mb-2">
                         <button class="w-11/12 rounded-full opacity-45 bg-[#FF9933] hover:animate-heartbeat"><p class="text-white text-lg font-bold p-1 inline-block">AGOTADO</p></button>
                     </div> 
                 </div>
             ))
         }
     </article>
-    <footer class="flex justify-center items-center my-10">
+    <footer class="flex justify-center items-center mt-10">
         <button class="w-60 rounded-md bg-[#FF9933] hover:animate-heartbeat"><p class="text-white text-xl font-bold p-4 inline-block">VER TODOS</p></button>
     </footer>
 </section>
