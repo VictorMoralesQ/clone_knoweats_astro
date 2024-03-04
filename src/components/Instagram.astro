@@ -1,7 +1,94 @@
+---
+import ArrowLeft from './icons/ArrowLeft.astro'
+import ArrowRight from './icons/ArrowRight.astro'
+
+const VIDEOS = [
+    {
+        name: "video_1",
+        src: "/public/video_1.mp4"
+    },
+    {
+        name: "video_2",
+        src: "/public/video_2.mp4"
+    },
+    {
+        name: "video_3",
+        src: "/public/video_3.mp4"
+    },
+    {
+        name: "video_4",
+        src: "/public/video_4.mp4"
+    },
+    {
+        name: "video_5",
+        src: "/public/video_5.mp4"
+    },
+    {
+        name: "video_6",
+        src: "/public/video_6.mp4"
+    },
+    {
+        name: "video_7",
+        src: "/public/video_7.mp4"
+    },
+    {
+        name: "video_8",
+        src: "/public/video_1.mp4"
+    },
+    {
+        name: "video_9",
+        src: "/public/video_2.mp4"
+    },
+    {
+        name: "video_10",
+        src: "/public/video_3.mp4"
+    },
+    {
+        name: "video_11",
+        src: "/public/video_4.mp4"
+    },
+    {
+        name: "video_12",
+        src: "/public/video_5.mp4"
+    },
+    {
+        name: "video_13",
+        src: "/public/video_6.mp4"
+    },
+    {
+        name: "video_14",
+        src: "/public/video_7.mp4"
+    },
+]
+---
+
 <article class="w-5/6 flex flex-col ml-16 mt-10">
     <header class="flex flex-col justify-center items-center">
         <h2 class="text-xl font-light italic text-black">¿SABES COMER?</h2>
         <h2 class="font-bold text-black text-5xl">Gente que come con nosotros</h2>
     </header>
-    
+    <div class="overflow-hidden relative flex flex-row">
+        <button class="absolute size-10 bg-[#bdcfc6] flex justify-center items-center rounded-full p-3">
+            <ArrowLeft></ArrowLeft>
+        </button>
+        <ul id="video-carousel" class="flex flex-row gap-x-3 transition-transform duration-500 ease-in-out">
+            {VIDEOS.map(({name, src}) => (
+                <li class="video-item rounded-lg relative mt-10">
+                    <video class="w-full h-full rounded-md" muted>
+                        <source type="video/mp4" src={src}>
+                        Tu navegador no acepta el elemento vídeo
+                    </video>
+                </li>
+            ))}
+        </ul>
+        <button class="absolute size-10 bg-[#bdcfc6] flex justify-center items-center rounded-full p-3">
+            <ArrowRight></ArrowRight>
+        </button>
+    </div>
 </article>
+
+<style>
+.video-item:not(:nth-child(-n+5)) {
+    display: none;
+}
+</style>
