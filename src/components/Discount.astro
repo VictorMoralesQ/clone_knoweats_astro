@@ -1,0 +1,28 @@
+---
+import Check from '../components/icons/Check.astro'
+---
+
+<section class="w-5/6 ml-16 flex flex-row">
+    <article class="flex flex-col mt-14">
+        <header class="flex flex-col gap-y-2 mt-8">
+            <h2 class="text-xl font-light italic text-black">AHORA CON KNOWEATS...</h2>
+            <h2 class="font-bold text-black text-5xl">Pide más, paga menos.</h2>
+        </header>
+        <p class="text-black font-light text-sm mt-5">
+            Obtén descuentos en cada uno de tus pedidos, cuanto más platos añadas, mayor será tu descuento...
+        </p>
+        <ul class="flex flex-col font-light gap-y-1 mt-5">
+            <li class="flex gap-x-2 flex-row"><span class="mt-1"><Check></Check></span><p class="text-md pb-0.6 font-base text-black">A partir de <span class="font-bold">8 platos:</span> obtén un <span class="font-bold">5%</span> de descuento</p></li>
+            <li class="flex gap-x-2 flex-row"><span class="mt-1"><Check></Check></span><p class="text-md pb-0.6 font-base text-black">A partir de <span class="font-bold">12 platos: 8%</span> de descuento</p></li>
+            <li class="flex gap-x-2 flex-row"><span class="mt-1"><Check></Check></span><p class="text-md pb-0.6 font-base text-black">A partir de <span class="font-bold">18 platos: 10%</span> de descuento</p></li>
+        </ul>
+        <div class=" mt-5">
+            <video class="w-5/12 h-auto" autoplay loop muted src="/public/discount.mp4">
+                Tu navegador no acepta el elemento vídeo
+            </video>
+        </div>
+    </article>
+    <article class="h-[1500px] w-[1100px]">
+        <img class="rounded-xl" src="/public/tapers.webp" alt="Imagen de tapers de Knoweats">
+    </article>
+</section>
