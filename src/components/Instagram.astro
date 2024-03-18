@@ -79,7 +79,7 @@ const VIDEOS = [
                         <source type="video/mp4" src={src}>
                         Tu navegador no acepta el elemento vídeo
                     </video>
-                    <button class="flex justify-center items-center absolute inset-24 mt-24 z-9999 rounded-full bg-[#0000001a] size-12">
+                    <button class="flex justify-center items-center absolute z-9999 rounded-full bg-[#0000001a] size-12">
                         <img class="size-7 p-2" src="/public/play-icon.svg" alt="Botón de play">
                     </button>
                     <button class="flex justify-center items-center absolute inset-2 mt-1 z-9999 rounded-full bg-[#0000001a] size-12">
@@ -95,8 +95,20 @@ const VIDEOS = [
 </article>
 
 <style>
-.video-item:not(:nth-child(-n+6)) {
+.video-item {
     display: none;
 }
+
+    @media (min-width: 760px) and (max-width: 1023px) {
+    .video-item:nth-child(-n+4) {
+        display: block;
+    }
+    }
+
+    @media (min-width: 1024px){
+    .video-item:nth-child(-n+7) {
+        display: block;
+     }   
+    }
 
 </style>

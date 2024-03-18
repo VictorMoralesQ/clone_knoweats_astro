@@ -133,10 +133,10 @@ const DISHES = [
     <header class="flex justify-center items-center mt-4">
         <h2 class="font-bold text-black text-5xl">Tienes que probar</h2>
     </header>
-    <article class="flex-row w-5/6 mx-auto grid grid-cols-4 mt-6 gap-x-4">
+    <article class="flex-row w-5/6 mx-auto lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 mt-6 lg:gap-x-4 md:gap-x-7 md:gap-y-4">
         {
             DISHES.map(({name, img_url, img_url_hover, weight, price, indications, info, type}) =>(
-                <div class="w-full col-span-1 rounded-xl bg-[#F5F6F9]">
+                <div class="w-full lg:col-span-1 rounded-xl bg-[#F5F6F9]">
                     <div id="image-container" class="flex flex-col justify-between">
                         <span class="flex rounded-full font-['Fraunces'] bg-[#d8b47c] text-white font-bold text-xl ml-[140px] mt-3 px-4 z-10 absolute">{type}</span>
                         <img class=" rounded-t-xl w-full h-[300px] relative block opacity-100 transition-opacity duration-300" src={img_url} alt={name}/>
