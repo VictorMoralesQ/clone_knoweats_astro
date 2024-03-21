@@ -1,0 +1,56 @@
+---
+import Plus from '../components/icons/Plus.astro'
+    const FAQS = [
+        {
+            question: "¿Cuándo recibiré mi pedido?",
+            answer1: "Haz tu pedido de lunes a domingo (hasta las 23:59h) y recíbelo el martes* siguiente.",
+            answer2: "*Importante: Los días de entrega pueden sufrir cambios debido a días festivos (locales y nacionales) y/o huelgas de transporte u otras circunstancias.",
+            answer3: "El horario de reparto es de 9:00 a 15:00h.",
+        },
+        {
+            question: "¿Cuándo caducan y cómo se conservan los platos?",
+            answer1: "La fecha de caducidad se especifica en la etiqueta trasera de cada plato, éstos tienen una vida útil de 7-8 días desde su recepción.",
+            answer2: "Desde que se envasan hasta que te los comes ha de mantenerse la cadena de frío, los recibirás con envío refrigerado y deberás meterlos directamente a tu nevera hasta que los vayas a consumir.",
+            answer3: ""
+        },
+        {
+            question: "¿Hay pedido minimo?",
+            answer1: "El importe mínimo para poder validar el pedido es 20€ (IVA incl.) de sin contar los gastos de envío ni promociones.",
+            answer2: "",
+            answer3: ""
+        },
+        {
+            question: "¿Cómo puedo pagar?",
+            answer1: "Podrás realizar tu pedido pagando con Tarjeta de crédito/débito, Paypal o Tarjetas restaurante (Sodexo, Cheque Gourmet, Tickets Restaurant).",
+            answer2: "",
+            answer3: ""
+        }
+    ]
+---
+
+
+
+<article class="w-5/6 flex flex-col ml-16 justify-center items-center">
+    <header class="flex flex-col justify-center items-center">
+        <h2 class="font-bold text-black text-5xl">¿Alguna duda?</h2>
+    </header>
+    <div class="flex flex-col mt-10 justify-center items-center max-w-full">
+        {
+            FAQS.map(({question, answer1, answer2, answer3})=>(
+                <div class="min-w-full border-y border-y-black py-3 hover:bg-gray-100">
+                    <details class="block">
+                        <summary class="flex justify-between items-center">
+                            <h3 class="font-['Fraunces'] font-bold text-2xl text-black">{question}</h3>
+                            <Plus class="size-4 mx-3"></Plus>
+                        </summary>
+                        <div class="my-3 ml-2 break-words">
+                            <p class="text-sm text-gray-700 p-1 max-w-[637px]">{answer1}</p>
+                            <p class="text-sm text-gray-700 p-1 max-w-[637px]">{answer2}</p> 
+                            <em class="text-sm text-gray-700 p-1 max-w-[637px]">{answer3}</em>       
+                        </div>
+                    </details>
+                </div>
+            ))
+        }
+    </div>
+</article>
