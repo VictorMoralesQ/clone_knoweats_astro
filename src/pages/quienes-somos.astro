@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Bloc1 from '../components/Bloc1.astro'
+import Bloc2 from '../components/Bloc2.astro'
+import Bloc3 from '../components/Bloc3.astro'
+---
+
+<Layout title="Clone Knoweats Landing Page"
+	description="Cloning the web page from Knoweats with educational fines">
+	
+	<main>
+        <header class="mt-16 flex flex-col justify-center items-center gap-y-2">
+            <h2 class="text-6xl font-bold text-black">Quiénes somos</h2>
+            <h2 class="font-light italic text-black text-xl">TE HABLAMOS SOBRE NOSOTROS</h2>
+        </header>
+		<SectionContainer id="bloc_1">
+			<Bloc1/>
+		</SectionContainer>
+		<SectionContainer id="bloc_2">
+			<Bloc2/>
+		</SectionContainer>
+        <SectionContainer id="bloc_3">
+			<Bloc3/>
+		</SectionContainer>
+        <SectionContainer id="bloc_4">
+		</SectionContainer>
+        <SectionContainer id="bloc_5">
+		</SectionContainer>
+        <SectionContainer id="bloc_6">
+		</SectionContainer>
+        <SectionContainer id="bloc_7">
+		</SectionContainer>
+	</main>
+</Layout>
