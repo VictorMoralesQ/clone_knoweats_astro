@@ -1,0 +1,75 @@
+---
+import Plus from '../components/icons/Plus.astro'
+    const FAQS = [
+        {
+            question: "¿Cambian los platos del menú cada semana?",
+            answer1: "Sí, ¡nos encanta mantener las cosas frescas! Todos los lunes tenemos nueva carta y siempre con novedades.",
+            answer2: "",
+            answer3: "",
+        },
+        {
+            question: "¿Cómo se conservan los platos?",
+            answer1: "Es muy importante que tus platos mantengan la cadena de frío para que se conserven como el primer día. Cuando recibas tu pedido es muy importante que lo metas en la nevera nada más lleguen.",
+            answer2: "",
+            answer3: ""
+        },
+        {
+            question: "¿Se pueden congelar los platos?",
+            answer1: "Puedes congelarlos sin problema (recomendamos que se descongele poniéndolo en el frigorífico 24h antes de su consumo), aunque siempre recomendamos que se coma lo antes posible para disfrutar del producto como recién hecho.",
+            answer2: "",
+            answer3: ""
+        },
+        {
+            question: "¿Cómo caliento los platos? ¿Micro? ¿Sartén? ¿Horno?",
+            answer1: "Puedes calentar tanto en microondas como en sartén. Para el microondas debes retirar o agujerear el film protector y aunque la bandeja es apta para calentar en el micro, recomendamos colocar la comida en un plato y calentar el tiempo recomendado que se especifica en la etiqueta de cada táper.",
+            answer2: "Para calentarlo en el horno, pasa la comida de la bandeja a un recipiente apto para horno y caliéntalo a una temperatura máxima de 150º.",
+            answer3: ""
+        },
+        {
+            question: "¿Tenéis opciones sin gluten?",
+            answer1: "A pesar de que tenemos platos sin gluten, no podemos ofrecer platos 100% libres de gluten ya que la comida se elabora toda en el mismo obrador, por lo tanto no podemos garantizar que no haya contaminación cruzada.",
+            answer2: "",
+            answer3: "",
+        },
+        {
+            question: "¿Dónde puedo ver los ingredientes e información nutricional?",
+            answer1: "En la web puedes ver la ficha de cada plato donde encontrarás los 'Ingredientes' e 'Información Nutricional'. También puedes consultar esta información en la etiqueta que acompaña cada plato.",
+            answer2: "",
+            answer3: ""
+        },
+        {
+            question: "¿Dónde puedo ver la fedcha de caducidad de los platos?",
+            answer1: "La fecha de caducidad se especifica en la etiqueta trasera de cada plato, éstos tienen una vida útil refrigerada de aproximadamente 8 días desde su recepción.",
+            answer2: "",
+            answer3: ""
+        },
+    ]
+---
+
+
+
+<article class="w-5/6 flex flex-col justify-center items-center rounded-xl mt-8"
+style="border: 1px solid black">
+    <header class="mt-5 flex flex-col justify-center items-center">
+        <h2 class="text-4xl font-bold text-black">Los platos</h2>
+    </header>
+    <div class="px-5 pb-8 flex flex-col mt-16 justify-center items-center w-full">
+        {
+            FAQS.map(({question, answer1, answer2, answer3})=>(
+                <div class="w-full border-y border-y-black py-3 hover:bg-gray-100">
+                    <details>
+                        <summary class="flex justify-between items-center">
+                            <h3 class="font-['Fraunces'] font-bold text-2xl text-black">{question}</h3>
+                            <Plus class="size-4 mx-3"></Plus>
+                        </summary>
+                        <div class="my-3 ml-2">
+                            <p class="text-sm text-gray-700 p-1 max-w-[637px]">{answer1}</p>
+                            <p class="text-sm text-gray-700 p-1 max-w-[637px]">{answer2}</p> 
+                            <em class="text-sm text-gray-700 p-1 max-w-[637px]">{answer3}</em>       
+                        </div>
+                    </details>
+                </div>
+            ))
+        }
+    </div>
+</article>

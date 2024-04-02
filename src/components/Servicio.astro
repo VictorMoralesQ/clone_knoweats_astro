@@ -1,0 +1,75 @@
+---
+import Plus from '../components/icons/Plus.astro'
+    const FAQS = [
+        {
+            question: "¿Qué es Knoweats?",
+            answer1: "Knoweats es un servicio online de platos preparados de forma 100% natural con el objetivo de hacerle la vida más fácil a los amantes de la comida sana. Nuestros platos están cocinados con ingredientes locales de la mejor calidad para ofrecerte platos ricos y sabrosos todas las semanas.",
+            answer2: "",
+            answer3: "",
+        },
+        {
+            question: "¿Cómo funciona el servicio?",
+            answer1: "Es tan sencillo como elegir los platos que más te gusten cada semana y nosotros cocinamos y te lo enviamos a tu casa u oficina en una sola entrega.",
+            answer2: "",
+            answer3: ""
+        },
+        {
+            question: "¿Dónde y cuándo entregáis?",
+            answer1: "Haz tu pedido de lunes a domingo (hasta las 23:59h) y recíbelo el martes* siguiente en cualquier punto de la península.",
+            answer2: "El horario de reparto es de 9:00 a 15:00h.",
+            answer3: "Importante: Los días de entrega pueden sufrir cambios debido a días festivos (locales y nacionales) y/o huelgas de transporte u otras circunstancias."
+        },
+        {
+            question: "¿Hay un importe mínimo para realizar un pedido?",
+            answer1: "El importe mínimo para poder validar el pedido es de 20€ (IVA incluido) sin incluir los gastos de envío ni promociones.",
+            answer2: "",
+            answer3: ""
+        },
+        {
+            question: "¿Puedo realizar un pedido el día que quiera?",
+            answer1: "Sí, lo único que tienes que tener en cuenta es el día que recibirás el pedido.",
+            answer2: "Realizamos envíos a toda la Península los martes en la franja horaria de 9:00h a 15:00h. En las Islas Baleares, Canarias, Ceuta y Melilla no realizamos envíos por el momento.",
+            answer3: "",
+        },
+        {
+            question: "¿Cuál es el último día de la semana para realizar un pedido?",
+            answer1: "Puedes realizar tu pedido  cualquier día de la semana. Ten en cuenta que cada lunes cambiamos gran parte de la carta e incluimos platos nuevos.",
+            answer2: "Para recibir tu pedido el martes, tienes hasta las 23:59h del domingo para realizar tu pedido.",
+            answer3: ""
+        },
+        {
+            question: "¿Se puede realizar un pedido por teléfono o WhatsApp?",
+            answer1: "Si tienes cualquier duda o problema para realiziar tu pedido en la web, ponte en contacto con nostros y te ayudaremos a gestionar el pedido.",
+            answer2: "La forma más rápida es escribiéndonos un correo electrónico a info@knoweats.com.",
+            answer3: ""
+        },
+    ]
+---
+
+
+
+<article class="w-5/6 flex flex-col justify-center items-center rounded-xl mt-8"
+style="border: 1px solid black">
+    <header class="mt-5 flex flex-col justify-center items-center">
+        <h2 class="text-4xl font-bold text-black">Servicio</h2>
+    </header>
+    <div class="px-5 pb-8 flex flex-col mt-16 justify-center items-center w-full">
+        {
+            FAQS.map(({question, answer1, answer2, answer3})=>(
+                <div class="w-full border-y border-y-black py-3 hover:bg-gray-100">
+                    <details>
+                        <summary class="flex justify-between items-center">
+                            <h3 class="font-['Fraunces'] font-bold text-2xl text-black">{question}</h3>
+                            <Plus class="size-4 mx-3"></Plus>
+                        </summary>
+                        <div class="my-3 ml-2">
+                            <p class="text-sm text-gray-700 p-1 max-w-[637px]">{answer1}</p>
+                            <p class="text-sm text-gray-700 p-1 max-w-[637px]">{answer2}</p> 
+                            <em class="text-sm text-gray-700 p-1 max-w-[637px]">{answer3}</em>       
+                        </div>
+                    </details>
+                </div>
+            ))
+        }
+    </div>
+</article>
