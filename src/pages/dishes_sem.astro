@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import MainDishes from '../components/MainDishes.astro'
+---
+
+
+<Layout title="Clone Knoweats Landing Page"
+	description="Cloning the web page from Knoweats with educational fines">
+	<main>
+        <header class="mt-5 flex flex-col pb-24 items-center">
+            <div class="flex flex-row justify-start gap-x-2">
+                <button class="rounded-full bg-black text-white font-bold text-lg px-6 py-1.5">Todos</button>
+                <button class="rounded-full border border-black bg-white text-black font-bold text-lg px-6 py-1.5 hover:bg-black hover:text-white">Principales</button>
+                <button class="rounded-full border border-black bg-white text-black font-bold text-lg px-6 py-1.5 hover:bg-black hover:text-white">Veganos</button>
+                <button class="rounded-full border border-black bg-white text-black font-bold text-lg px-6 py-1.5 hover:bg-black hover:text-white">Postres</button>
+            </div>
+            <div class="flex flex-row w-5/6 pl-6 py-8 rounded-lg bg-[#f2f2f2] mt-8 justify-between">
+                <div class="flex justify-center items-center gap-3">
+                    <h2 class="font-bold text-3xl text-[#313131]">Comidas</h2>
+                    <badge class="flex justify-center items-center font-bold text-[#707070] border rounded-full border-[#707070] px-4 mt-1.5">17</badge>
+                </div>
+                <div class="">
+                    <span class="text-[#707070] text-pretty flex flex-col justify-items-end mr-4 text-left">
+                        Elige entre nuestra variedad semanal de platos. <br>
+                        Cambiamos el menú cada lunes, así que si te gusta algo, <br> pídelo antes de 
+                        que acabe el domingo.
+                    </span>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-5">
+                <span class="text-xs text-black">
+                    Próxima entrega: martes, 23 de abril <b>(en 8 días)</b>
+                </span>
+            </div>
+        </header>
+        <SectionContainer>
+            <MainDishes>
+
+            </MainDishes>
+        </SectionContainer>
+	</main>
+</Layout>

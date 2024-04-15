@@ -1,0 +1,337 @@
+---
+const INDICATIONS = {
+    APIO: {
+        name: "apio",
+        img: "/public/apio.svg"
+    },
+    FRUTOS_SECOS: {
+        name: "frutos secos",
+        img: "/public/frutos-secos-cascara.svg"
+    },
+    PESCADO: {
+        name: "pescado",
+        img: "/public/pescado.svg"
+    },
+    CRUSTACEOS: {
+        name: "pescado",
+        img: "/public/crustaceos.svg"
+    },
+    MOLUSCOS: {
+        name: "moluscos",
+        img: "/public/moluscos.svg"
+    },
+    LACTEOS: {
+        name: "lacteos",
+        img: "/public/lacteos.svg"
+    },
+    SULFITOS: {
+        name: "pescado",
+        img: "/public/sulfitos.svg"
+    },
+    GLUTEN: {
+        name: "gluten",
+        img: "/public/gluten.svg"
+    },
+    SESAMO: {
+        name: "sesamo",
+        img: "/public/sesamo.svg"
+    },
+    SOJA: {
+        name: "soja",
+        img: "/public/soja.svg"
+    },
+}
+
+const INFO = {
+    DISH_1: {
+        cals: "calories",
+        amount_cals: "733",
+        prote: "protein",
+        amount_prote: "40",
+        carbs: "carbs",
+        amount_carbs: "39",
+        fats: "fats",
+        amount_fats: "28"
+    },
+    DISH_2: {
+        cals: "calories",
+        amount_cals: "513",
+        prote: "protein",
+        amount_prote: "37",
+        carbs: "carbs",
+        amount_carbs: "31",
+        fats: "fats",
+        amount_fats: "25"
+    },
+    DISH_3: {
+        cals: "calories",
+        amount_cals: "751",
+        prote: "protein",
+        amount_prote: "55",
+        carbs: "carbs",
+        amount_carbs: "124",
+        fats: "fats",
+        amount_fats: "17"
+    },
+    DISH_4: {
+        cals: "calories",
+        amount_cals: "792",
+        prote: "protein",
+        amount_prote: "43",
+        carbs: "carbs",
+        amount_carbs: "66",
+        fats: "fats",
+        amount_fats: "30"
+    },
+    DISH_5: {
+        cals: "calories",
+        amount_cals: "533",
+        prote: "protein",
+        amount_prote: "21",
+        carbs: "carbs",
+        amount_carbs: "63",
+        fats: "fats",
+        amount_fats: "22"
+    },
+    DISH_6: {
+        cals: "calories",
+        amount_cals: "567",
+        prote: "protein",
+        amount_prote: "28",
+        carbs: "carbs",
+        amount_carbs: "86",
+        fats: "fats",
+        amount_fats: "13"
+    },
+    DISH_7: {
+        cals: "calories",
+        amount_cals: "643",
+        prote: "protein",
+        amount_prote: "29",
+        carbs: "carbs",
+        amount_carbs: "44",
+        fats: "fats",
+        amount_fats: "39"
+    },
+    DISH_8: {
+        cals: "calories",
+        amount_cals: "549",
+        prote: "protein",
+        amount_prote: "50",
+        carbs: "carbs",
+        amount_carbs: "37",
+        fats: "fats",
+        amount_fats: "22"
+    },
+    DISH_9: {
+        cals: "calories",
+        amount_cals: "765",
+        prote: "protein",
+        amount_prote: "36",
+        carbs: "carbs",
+        amount_carbs: "58",
+        fats: "fats",
+        amount_fats: "45"
+    },
+    DISH_10: {
+        cals: "calories",
+        amount_cals: "616",
+        prote: "protein",
+        amount_prote: "43",
+        carbs: "carbs",
+        amount_carbs: "42",
+        fats: "fats",
+        amount_fats: "32"
+    },
+    
+    
+    
+    
+    
+    
+
+    
+    
+}
+
+const DISHES = [
+    {
+        name: "Solomillo braseado",
+        img_url: "/public/solomillo-salsa-higos-knoweats.webp",
+        img_url_hover : "/public/Solomillo-salsa-de-higos-knoweats_hover.webp",
+        weight: "450g",
+        price: "7,95€",
+        type: "equilibrado",
+        indications: [INDICATIONS.APIO, INDICATIONS.FRUTOS_SECOS],
+        info: [INFO.DISH_1]
+        
+    },
+    {
+        name: "Salmón con salsa al cava",
+        img_url: "/public/salmon-al-cava-knoweats.webp",
+        img_url_hover : "/public/salmoncava_hover.webp",
+        weight: "450g",
+        price: "8,95€",
+        type: "equilibrado",
+        indications: [INDICATIONS.PESCADO, INDICATIONS.CRUSTACEOS, INDICATIONS.MOLUSCOS, 
+        INDICATIONS.APIO, INDICATIONS.LACTEOS, INDICATIONS.SULFITOS],
+        info: [INFO.DISH_2]
+    },
+    {
+        name: "Arroz de costillas y setas",
+        img_url: "/public/arroz-costilla-setas-knoweats.webp",
+        img_url_hover : "/public/arroz-costilla-setas_hover.webp",
+        weight: "420g",
+        price: "6,95€",
+        type: "",
+        indications: [INDICATIONS.APIO],
+        info: [INFO.DISH_3]
+        
+    },
+    {
+        name: "Lasaña boloñesa",
+        img_url: "/public/lasanya-bolonyesa-knoweats.webp",
+        img_url_hover : "/public/lasanabolonesa_hover.webp",
+        weight: "450g",
+        price: "7,25€",
+        type: "",
+        indications: [INDICATIONS.GLUTEN, INDICATIONS.SULFITOS, INDICATIONS.LACTEOS],
+        info: [INFO.DISH_4]
+        
+    },
+    {
+        name: "Spaghettis con albóndigas al pomodoro",
+        img_url: "/public/spaghettis-albondigas.webp",
+        img_url_hover : "/public/spaghettis-albondigas-hover.webp",
+        weight: "450g",
+        price: "7,25€",
+        type: "",
+        indications: [INDICATIONS.GLUTEN, INDICATIONS.LACTEOS],
+        info: [INFO.DISH_5]
+        
+    },
+    {
+        name: "Arroz negro de calamar y alcachofa",
+        img_url: "/public/arroz-negro-knoweats-frontal.webp",
+        img_url_hover : "/public/arroz-negro-hover.webp",
+        weight: "420g",
+        price: "6,95€",
+        type: "",
+        indications: [INDICATIONS.CRUSTACEOS, INDICATIONS.MOLUSCOS, INDICATIONS.PESCADO, INDICATIONS.APIO],
+        info: [INFO.DISH_6]
+        
+    },
+    {
+        name: "Fabada",
+        img_url: "/public/fabada.webp",
+        img_url_hover : "/public/fabada-hover.webp",
+        weight: "450g",
+        price: "7,45€",
+        type: "",
+        indications: [],
+        info: [INFO.DISH_7]
+        
+    },
+    {
+        name: "Pollo asado a la coreana",
+        img_url: "/public/pollo-coreano.webp",
+        img_url_hover : "/public/pollo-coreano-hover.webp",
+        weight: "450g",
+        price: "7,25€",
+        type: "equilibrado",
+        indications: [INDICATIONS.SOJA, INDICATIONS.GLUTEN, INDICATIONS.SESAMO],
+        info: [INFO.DISH_8]
+        
+    },
+    {
+        name: "Cordero al horno en su jugo",
+        img_url: "/public/cordero-rulo.webp",
+        img_url_hover : "/public/cordero-rulo-hover.webp",
+        weight: "430g",
+        price: "8,95€",
+        type: "equilibrado",
+        indications: [INDICATIONS.SULFITOS],
+        info: [INFO.DISH_9]
+        
+    },
+    {
+        name: "Pollo en salsa bacon",
+        img_url: "/public/pollo-bacon.webp",
+        img_url_hover : "/public/pollo-bacon-hover.webp",
+        weight: "450g",
+        price: "7,25€",
+        type: "equilibrado",
+        indications: [INDICATIONS.APIO, INDICATIONS.LACTEOS, INDICATIONS.FRUTOS_SECOS],
+        info: [INFO.DISH_10]
+        
+    },
+    
+]
+---
+
+
+
+<article class="flex flex-col justify-center items-center">
+    <header class="flex gap-x-2">
+        <h2 class="font-['Fraunces'] font-bold text-black text-3xl">Platos principales</h2>
+        <span class="text-black mt-1">-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+    </header>
+    <div class=" mt-6 flex-row w-11/12 mx-auto grid grid-cols-4 gap-4">
+        {
+            DISHES.map(({name, img_url, img_url_hover, weight, price, indications, info, type}) =>(
+                <div class="w-full lg:col-span-1 rounded-xl bg-[#F5F6F9]">
+                    <div id="image-container" class="flex flex-col justify-between">
+                        <span class="flex rounded-full font-['Fraunces'] bg-[#d8b47c] text-white font-bold text-xl ml-[190px] mt-3 px-4 z-10 absolute">{type}</span>
+                        <img class=" rounded-t-xl w-full h-[300px] relative block opacity-100 transition-opacity duration-300" src={img_url} alt={name}/>
+                        <img class=" rounded-t-xl object-cover h-[300px] lg:w-[333px] md:w-[285px] absolute block opacity-0 hover:opacity-100 transition-opacity duration-300" src={img_url_hover} alt={name}/>
+                        <span class="rounded-full bg-black text-white font-bold text-xs px-4 mt-[265px] ml-2 py-1 z-10 absolute block ">AGOTADO</span>
+                    </div>
+                    <h5 class="font-bold w-full  text-black text-[1.2rem] mt-3 ml-4">{name}</h5>
+                    <div class="flex mt-2 mr-4 justify-between">
+                        <div class="flex justify-start ml-3">
+                            <span class="text-sm text-gray-400">({weight})</span>
+                        </div>
+                        <div class="flex justify-end gap-x-1">
+                        {
+                            indications.map((indication) =>(
+                                
+                                 <img class="size-6" src={indication.img} alt={indication.name}>
+                            ))
+                        }
+                        </div>
+                    </div>
+                    <h5 class="font-bold w-full mr-5 text-black text-[1.2rem] mt-3 ml-4">{price}</h5>
+                    <div class="flex flex-row rounded-full w-11/12 justify-center bg-[#fff] mx-auto mt-3">
+                        <ul class="flex flex-row justify-center my-1 w-full">
+                        {
+                            info.map((inf)=>(
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-black text-sm">{inf.amount_cals}</li>
+                                    <li class="text-[11px] text-gray-400">{inf.cals}</li>
+                                </div>
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-black text-sm">{inf.amount_prote}</li>
+                                    <li class="text-[11px] text-gray-400">{inf.prote}</li>
+                                </div>
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-sm  text-black">{inf.amount_carbs}</li>
+                                    <li class="text-[11px]  text-gray-400">{inf.carbs}</li>
+                                </div>
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-sm  text-black">{inf.amount_fats}</li>
+                                    <li class="text-[11px] text-gray-400">{inf.fats}</li>
+                                </div>
+                               
+                                
+                            ))
+                        }
+                        </ul> 
+                    </div>
+                    <div class="flex justify-center mt-3 mb-2">
+                        <button class="w-11/12 rounded-full opacity-45 bg-[#FF9933] hover:animate-heartbeat"><p class="text-white text-lg font-bold p-1 inline-block">AGOTADO</p></button>
+                    </div> 
+                </div>
+            ))
+        }
+    </div>
+</article>
