@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import MainDishes from '../components/MainDishes.astro'
+import VeganDishes from '../components/VeganDishes.astro'
+import Desserts from '../components/Desserts.astro'
 ---
 
 
@@ -35,9 +37,13 @@ import MainDishes from '../components/MainDishes.astro'
             </div>
         </header>
         <SectionContainer>
-            <MainDishes>
-
-            </MainDishes>
+            <MainDishes/>
+        </SectionContainer>
+        <SectionContainer>
+            <VeganDishes/>
+        </SectionContainer>
+        <SectionContainer>
+            <Desserts/>
         </SectionContainer>
 	</main>
 </Layout>

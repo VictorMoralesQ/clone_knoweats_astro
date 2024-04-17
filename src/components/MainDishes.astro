@@ -276,7 +276,7 @@ const DISHES = [
         <h2 class="font-['Fraunces'] font-bold text-black text-3xl">Platos principales</h2>
         <span class="text-black mt-1">-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
     </header>
-    <div class=" mt-6 flex-row w-11/12 mx-auto grid grid-cols-4 gap-4">
+    <div class=" mt-6 flex-row w-11/12 grid grid-cols-4 gap-4">
         {
             DISHES.map(({name, img_url, img_url_hover, weight, price, indications, info, type}) =>(
                 <div class="w-full lg:col-span-1 rounded-xl bg-[#F5F6F9]">
@@ -286,7 +286,7 @@ const DISHES = [
                         <img class=" rounded-t-xl object-cover h-[300px] lg:w-[333px] md:w-[285px] absolute block opacity-0 hover:opacity-100 transition-opacity duration-300" src={img_url_hover} alt={name}/>
                         <span class="rounded-full bg-black text-white font-bold text-xs px-4 mt-[265px] ml-2 py-1 z-10 absolute block ">AGOTADO</span>
                     </div>
-                    <h5 class="font-bold w-full  text-black text-[1.2rem] mt-3 ml-4">{name}</h5>
+                    <h5 class="font-bold w-full  text-black text-[1.2rem] mt-3 ml-2">{name}</h5>
                     <div class="flex mt-2 mr-4 justify-between">
                         <div class="flex justify-start ml-3">
                             <span class="text-sm text-gray-400">({weight})</span>

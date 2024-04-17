@@ -1,0 +1,216 @@
+---
+const INDICATIONS = {
+    APIO: {
+        name: "apio",
+        img: "/public/apio.svg"
+    },
+    FRUTOS_SECOS: {
+        name: "frutos secos",
+        img: "/public/frutos-secos-cascara.svg"
+    },
+    PESCADO: {
+        name: "pescado",
+        img: "/public/pescado.svg"
+    },
+    CRUSTACEOS: {
+        name: "pescado",
+        img: "/public/crustaceos.svg"
+    },
+    MOLUSCOS: {
+        name: "moluscos",
+        img: "/public/moluscos.svg"
+    },
+    LACTEOS: {
+        name: "lacteos",
+        img: "/public/lacteos.svg"
+    },
+    SULFITOS: {
+        name: "pescado",
+        img: "/public/sulfitos.svg"
+    },
+    GLUTEN: {
+        name: "gluten",
+        img: "/public/gluten.svg"
+    },
+    SESAMO: {
+        name: "sesamo",
+        img: "/public/sesamo.svg"
+    },
+    SOJA: {
+        name: "soja",
+        img: "/public/soja.svg"
+    },
+    VEGANO: {
+        name: "vegano",
+        img: "/public/vegano.svg"
+    },
+    PICANTE: {
+        name: "picante",
+        img: "/public/picante_suave.svg"
+    },
+    CACAHUETE: {
+        name: "cacahuete",
+        img: "/public/cacahuete.svg"
+    }
+
+}
+
+const INFO = {
+    DISH_1: {
+        cals: "calories",
+        amount_cals: "798",
+        prote: "protein",
+        amount_prote: "29",
+        carbs: "carbs",
+        amount_carbs: "79",
+        fats: "fats",
+        amount_fats: "42"
+    },
+    DISH_2: {
+        cals: "calories",
+        amount_cals: "580",
+        prote: "protein",
+        amount_prote: "19",
+        carbs: "carbs",
+        amount_carbs: "55",
+        fats: "fats",
+        amount_fats: "31"
+    },
+    DISH_3: {
+        cals: "calories",
+        amount_cals: "603",
+        prote: "protein",
+        amount_prote: "31",
+        carbs: "carbs",
+        amount_carbs: "52",
+        fats: "fats",
+        amount_fats: "29"
+    },
+    DISH_4: {
+        cals: "calories",
+        amount_cals: "472",
+        prote: "protein",
+        amount_prote: "15",
+        carbs: "carbs",
+        amount_carbs: "62",
+        fats: "fats",
+        amount_fats: "17"
+    }
+
+}
+
+const DISHES = [
+    {
+        name: "Spaghetti pesto & tomate seco",
+        img_url: "/public/spaghetti-pesto-tofu-knoweats.webp",
+        img_url_hover : "/public/spaghetti-pesto-hover.webp",
+        weight: "420g",
+        price: "6,85€",
+        type: "",
+        indications: [INDICATIONS.GLUTEN, INDICATIONS.SOJA, INDICATIONS.VEGANO],
+        info: [INFO.DISH_1]
+        
+    },
+    {
+        name: "Satay de verduras y tofu",
+        img_url: "/public/Satay_Verd.webp",
+        img_url_hover : "/public/Satay_Verd_Tofu_Detalle.webp",
+        weight: "450g",
+        price: "6,95€",
+        type: "",
+        indications: [INDICATIONS.SOJA, INDICATIONS.CACAHUETE, INDICATIONS.GLUTEN, 
+        INDICATIONS.VEGANO, INDICATIONS.PICANTE],
+        info: [INFO.DISH_2]
+    },
+    {
+        name: "Garbanzos con setas & almendra",
+        img_url: "/public/garbanzos-setas-knoweats.webp",
+        img_url_hover : "/public/garbanzos-setas-hover.webp",
+        weight: "450g",
+        price: "6,65€",
+        type: "",
+        indications: [INDICATIONS.APIO, INDICATIONS.SULFITOS, INDICATIONS.FRUTOS_SECOS, INDICATIONS.GLUTEN, INDICATIONS.VEGANO],
+        info: [INFO.DISH_3]
+        
+    },
+    {
+        name: "Pastel de patata",
+        img_url: "/public/pastel-patata.webp",
+        img_url_hover : "/public/pastel-patata-hover.webp",
+        weight: "450g",
+        price: "6,75€",
+        type: "",
+        indications: [INDICATIONS.SOJA, INDICATIONS.SULFITOS, INDICATIONS.APIO, INDICATIONS.VEGANO],
+        info: [INFO.DISH_4]
+        
+    }
+    
+]
+---
+
+
+
+<article class="flex flex-col justify-center items-center">
+    <header class="flex gap-x-2">
+        <h2 class="font-['Fraunces'] font-bold text-black text-3xl">Principales veganos</h2>
+        <span class="text-black mt-1">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+    </header>
+    <div class="mt-6 flex-row w-11/12 grid grid-cols-4 gap-4">
+        {
+            DISHES.map(({name, img_url, img_url_hover, weight, price, indications, info, type}) =>(
+                <div class="w-full lg:col-span-1 rounded-xl bg-[#F5F6F9]">
+                    <div id="image-container" class="flex flex-col justify-between">
+                        <span class="flex rounded-full font-['Fraunces'] bg-[#d8b47c] text-white font-bold text-xl ml-[190px] mt-3 px-4 z-10 absolute">{type}</span>
+                        <img class=" rounded-t-xl w-full h-[300px] relative block opacity-100 transition-opacity duration-300" src={img_url} alt={name}/>
+                        <img class=" rounded-t-xl object-cover h-[300px] lg:w-[317px] md:w-[285px] absolute block opacity-0 hover:opacity-100 transition-opacity duration-300" src={img_url_hover} alt={name}/>
+                        <span class="rounded-full bg-black text-white font-bold text-xs px-4 mt-[265px] ml-2 py-1 z-10 absolute block ">AGOTADO</span>
+                    </div>
+                    <h5 class="font-bold w-full  text-black text-[1.2rem] mt-3 ml-2">{name}</h5>
+                    <div class="flex mt-2 mr-4 justify-between">
+                        <div class="flex justify-start ml-3">
+                            <span class="text-sm text-gray-400">({weight})</span>
+                        </div>
+                        <div class="flex justify-end gap-x-1">
+                        {
+                            indications.map((indication) =>(
+                                
+                                 <img class="size-6" src={indication.img} alt={indication.name}>
+                            ))
+                        }
+                        </div>
+                    </div>
+                    <h5 class="font-bold w-full mr-5 text-black text-[1.2rem] mt-3 ml-4">{price}</h5>
+                    <div class="flex flex-row rounded-full w-11/12 justify-center bg-[#fff] mx-auto mt-3">
+                        <ul class="flex flex-row justify-center my-1 w-full">
+                        {
+                            info.map((inf)=>(
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-black text-sm">{inf.amount_cals}</li>
+                                    <li class="text-[11px] text-gray-400">{inf.cals}</li>
+                                </div>
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-black text-sm">{inf.amount_prote}</li>
+                                    <li class="text-[11px] text-gray-400">{inf.prote}</li>
+                                </div>
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-sm  text-black">{inf.amount_carbs}</li>
+                                    <li class="text-[11px]  text-gray-400">{inf.carbs}</li>
+                                </div>
+                                <div class="flex flex-col items-center mx-2">
+                                    <li class="text-sm  text-black">{inf.amount_fats}</li>
+                                    <li class="text-[11px] text-gray-400">{inf.fats}</li>
+                                </div>
+                               
+                                
+                            ))
+                        }
+                        </ul> 
+                    </div>
+                    <div class="flex justify-center mt-3 mb-2">
+                        <button class="w-11/12 rounded-full opacity-45 bg-[#FF9933] hover:animate-heartbeat"><p class="text-white text-lg font-bold p-1 inline-block">AGOTADO</p></button>
+                    </div> 
+                </div>
+            ))
+        }
+    </div>
+</article>
